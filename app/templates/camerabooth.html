@@ -140,6 +140,14 @@
         document.getElementById("snap").addEventListener("click", function() {
             context.drawImage(video, 0, 0, 640, 480);
             var imageDataURL = canvas.toDataURL('image/png');
+            // for downloading the image
+            var image = canvas.toDataURL("image/png", 1.0).replace("image/png", "image/octet-stream");
+            var link = document.createElement('a');
+            link.download = "buyme.jpg";
+            link.href = image;
+            link.click()
+            /* PLEASE download the image in the backend images directory */
+
             var req = new XMLHttpRequest();
             req.open('POST', 'photo_handle', true);
             req.setRequestHeader('content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
