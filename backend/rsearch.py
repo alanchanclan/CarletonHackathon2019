@@ -3,6 +3,8 @@ import os
 import time
 
 # Using Chrome to access web
+
+# change this link accordingly to where you installed your chrome driver dependency
 chromedriver = r"C:\Users\Admin\Documents\Allen\CBSS\Grade 11 IB\SET_application\CarletonHackathon2019\webdriver\win\chromedriver.exe"
 driver = webdriver.Chrome(chromedriver)
 
@@ -21,7 +23,7 @@ try:
     # Find image input
     upload_btn = driver.find_element_by_name('encoded_image')
     os.chdir("../images_backend")
-    upload_btn.send_keys(os.getcwd()+"/teddybear.jpg")
+    upload_btn.send_keys(os.getcwd()+"/buyme.jpg")
 
     time.sleep(5)
 
