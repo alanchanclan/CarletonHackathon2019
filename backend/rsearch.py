@@ -6,8 +6,7 @@ import time
 
 # Using Chrome to access web
 
-# change this link accordingly to where you installed your chrome driver dependency
-chromedriver = r"C:\Users\Admin\Documents\Allen\CBSS\Grade 11 IB\SET_application\CarletonHackathon2019\webdriver\win\chromedriver.exe"
+chromedriver = r"../webdriver/win/chromedriver.exe"
 driver = webdriver.Chrome(chromedriver)
 
 try:
