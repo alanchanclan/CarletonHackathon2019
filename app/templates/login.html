@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<title>Login</title>
+	<link rel="shortcut icon" type="image/png" href="../static/Logo.png">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
@@ -51,11 +52,6 @@
 						<span class="focus-input100" data-placeholder="&#xf191;"></span>
 					</div>
 
-					{% if error %}
-					<div class="p-b-15">
-						<id class='errorLine'>{{error}}</id>
-					</div>
-					{% endif %}
 					<div class="contact100-form-checkbox">
 						<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
 						<label class="label-checkbox100" for="ckb1">
@@ -72,6 +68,11 @@
 					<div class="text-center p-t-20">
 						<a class="txt1" href="#">
 							Forgot Password?
+						</a>
+					</div>
+					<div class="text-center p-t-20">
+						<a class="txt1" href="sign_up">
+							Sign Up
 						</a>
 					</div>
 

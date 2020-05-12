@@ -1,7 +1,23 @@
 @font-face {
-  font-family: Poppins-SemiBold;
-  src: url("../login/fonts/poppins/Poppins-SemiBold.ttf");
+  font-family: Poppins-Regular;
+  src: url('fonts/poppins/Poppins-Regular.ttf');
 }
+
+@font-face {
+  font-family: Poppins-Medium;
+  src: url('fonts/poppins/Poppins-Medium.ttf');
+}
+
+@font-face {
+  font-family: Poppins-Bold;
+  src: url('fonts/poppins/Poppins-Bold.ttf');
+}
+
+@font-face {
+  font-family: Poppins-SemiBold;
+  src: url('fonts/poppins/Poppins-SemiBold.ttf');
+}
+
 .container-login100 {
   width: 100%;
   min-height: 100vh;
@@ -32,29 +48,54 @@
 }
 
 .title{
- position: absolute;
- text-align: right;
- right: 50px;
- top:250px;
- color: white;
- font-family: Poppins-SemiBold;
-@ -68,7 +68,7 @@
- width: 170px;
- position: absolute;
- top:300px;
- left: 70px;
- font-size: 50px;
- border-radius: 30px;
- font-family: Poppins-SemiBold;
+  position: absolute;
+  text-align: right;
+  right: 100px;
+  top:250px;
+  color: white;
+  font-family: Poppins-SemiBold;
+  font-size: 70px;
+}
+#AIHover:hover{
+  background-color: rgba(2, 135, 207, 0.65);
+}
+#eCommerceHover:hover{
+  background-color: rgba(255, 173, 66, 0.61);
 }
 
 #startbutton{
+  height: 100px;
+  width: 270px;
   position: absolute;
-  top: 350px;
-  width: 150px;
-  height: 70px;
-  border-radius: 10px;
+  top:300px;
+  left: 70px;
+  font-size: 70px;
+  border-radius: 30px;
+  font-family: Poppins-SemiBold;
+  overflow:hidden;
+  color: white;
   background-color: black;
-  color:white;
-  font-size: 40px;
+  border:black;
+}
+#startbutton:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+#startbutton:after {
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 200%;
+  margin-left: -50px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+
+#startbutton:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
 }

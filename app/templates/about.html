@@ -1,10 +1,115 @@
 <html>
 <head>
   <title>About the devs</title>
-  <link rel="stylesheet" type="text/css" href="../static/about/about.css">
+  <link rel="shortcut icon" type="image/png" href="../static/Logo.png">
+  <style>
+    @font-face {
+      font-family: Poppins-Bold;
+      src: url("../static/login/fonts/poppins/Poppins-Bold.ttf");
+    }
+
+    @font-face {
+      font-family: Poppins-SemiBold;
+      src: url("..static/login/fonts/poppins/Poppins-SemiBold.ttf");
+    }
+
+    @font-face {
+      font-family: Poppins-Thin;
+      src: url("..static/login/fonts/poppins/Poppins-Thin.ttf");
+    }
+
+    h1 {
+        font-size: 70px;
+        font-family: American Typewriter;
+        font-weight: lighter;
+    }
+
+    span {
+        font-size: 55px;
+        font-family: American Typewriter;
+        color: lightgreen;
+    }
+
+    #home {
+          width: 20px;
+          height: 20px;
+    }
+
+    #navBar {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333;
+    }
+    .navvBar {
+        float: left;
+    }
+    .navvBar a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-family: Poppins-SemiBold;
+    }
+    .navvBar a:hover {
+        background-color: forestgreen;
+    }
+
+    #ending {
+        font-family: Poppins-Bold;
+        font-size: 10px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    body {
+        background-image: linear-gradient(lightgrey, #333);
+        font-family: Poppins-Thin;
+    }
+
+    #eren:hover {
+        color: red;
+    }
+
+    #allen:hover {
+        color: mintcream;
+    }
+
+    #edwin:hover {
+        color: green;
+    }
+
+    #oscar:hover {
+        color: blue;
+    }
+
+    .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: forestgreen;
+      color: white;
+      text-align: center;
+    }
+
+    .tinylogos {
+      height: 45px;
+      width: 45px;
+    }
+  </style>
 </head>
 <body>
-  <h1><center>About the Developers</center></h1>
+  <ul id="navBar">
+    <li class="navvBar"><a href="index.html"><img src="../static/home.png" id="home"></a></li>
+    <li class="navvBar"><a href="camerabooth.html">Photo BOOTH</a></li>
+    <li class="navvBar"><a href="about.html">ABOUT US</a></li>
+    <li class="navvBar"><a href="login.html">REGISTER/LOG IN</a></li>
+    <li class="navvBar"><a href="form.html">CONTACT US</a></li>
+  </ul>
+  <h1><center>< About the Developers /></center></h1>
   <table width=100%>
     <tr>
       <td><pre align="left" id="eren">
@@ -27,9 +132,9 @@
 ::::::/++++++++++++++++++++++++++++++++++++:::::::
 :::::://///////////////////////////////////:::::::
       </pre></td>
-      <td><b>EREN:</b> <ul><li>Back End Developer</li></ul></td>
-      <td><b>ALLEN:</b> <ul><li>Front End Developer</li></ul></td>
-      <td><pre id="allen">
+      <td><b><span>E</span>REN:</b> <ul><li>Back End Developer</li></ul></td>
+      <td><b><span>A</span>LLEN:</b> <ul><li>Front End Developer</li></ul></td>
+      <td><pre align="right" id="allen">
 ......................NNmmmmN.....................
 ..................mhyssoooooossydmdhm.............
 ...............NhsooooooooooooooooohN.............
@@ -51,7 +156,7 @@
       </pre></td>
     </tr>
     <tr>
-      <td align="left"><pre align="right" id="oscar">
+      <td align="left"><pre id="oscar">
 ```````````````````-:/-://///-````````````````````
 ``````````````````////////////:.``````````````````
 ```````````````.:////////////////-````````````````
@@ -71,9 +176,9 @@
 ``````````````.:::-......------:::-```````````````
 ````````..-:::::::::-.......-:::::::::-..`````````
       </pre></td>
-      <td><b>OSCAR:</b> <ul><li>Back End Developer</li></ul></td>
-      <td><b>EDWIN:</b> <ul><li>Front End Developer</li></ul></td>
-      <td><pre align="center" id="edwin">
+      <td><b><span>O</span>SCAR:</b> <ul><li>Back End Developer</li></ul></td>
+      <td><b><span>E</span>DWIN:</b> <ul><li>Front End Developer</li></ul></td>
+      <td><pre align="right" id="edwin">
 ````````````````````````````````````````````````
 ````````````````````...-::.`````````````````````
 ``````````````````+hmNMMMMmds:``````````````````
@@ -96,8 +201,8 @@
     </tr>
 
   </table>
-
-
-
+  <div class="footer">
+    <img class="tinylogos" onclick="window.location.href = 'https://www.instagram.com/_allentao_/'" src="../static/insta.png"> <img class="tinylogos" onclick="window.location.href = 'https://www.facebook.com'" src="../static/facebook.png"> <img class="tinylogos" onclick="window.location.href = 'https://www.twitter.com'" src="../static/twitter.png">
+  </div>
 </body>
 </html>

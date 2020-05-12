@@ -2,6 +2,10 @@ from flask import render_template, request, url_for, redirect
 from app import app, db
 from flask_login import current_user, login_user
 from app.models import User
+from datetime import datetime
+import os
+from base64 import decodebytes
+
 
 @app.route('/')
 @app.route('/index')
@@ -9,8 +13,21 @@ def index():
     return render_template('index.html')
 
 
+@app.route('/photo_handle', methods=["POST"])
+def photo_handle():
+    #data = request.form.get("data", True)
+
+    null, data = request.form['nada'].split(',', 1)
+    with open('crappic.png', 'wb') as fout:
+        fout.write(decodebytes(data))
+    return "0"
+
+
+
 @app.route('/login', methods=["GET"])
 def display_login():
+    if current_user.is_authenticated:
+        return redirect(url_for('index'))
     return render_template('login.html')
 
 
@@ -30,14 +47,16 @@ def login():
         if username != -1 and password != -1:
             user = User.query.filter_by(username=username).first()
             if user and user.check_password(password):
-                login_user()
-                print('attempted to log in user')
+                print("User logged in, ", user)
+                login_user(user)
             else:
                 return render_template('login.html', error="Invalid password or username.")
     return redirect(url_for('index'))
 
 @app.route('/sign_up', methods=['GET', 'POST'])
 def display_sign_up():
+    if current_user.is_authenticated:
+        return redirect(url_for('index'))
     return render_template('sign_up.html')
 
 @app.route('/sign_up_handle', methods=['GET', 'POST'])
@@ -82,6 +101,10 @@ def sign_up():
         else:
             return render_template('sign_up.html', error="Please complete the form.")
 
+@app.route('/camerabooth')
+def camerabooth():
+    return render_template('camerabooth.html')
+
 @app.route('/about')
 def about():
     return render_template('about.html')
@@ -90,3 +113,8 @@ def about():
 @app.route('/form')
 def form():
     return render_template('form.html')
+
+
+@app.route('/base')
+def base():
+    return render_template('base.html')
